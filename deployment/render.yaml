@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cashflow-pro-backend
+    env: node
+    buildCommand: "cd backend && npm install"
+    startCommand: "cd backend && node server.js"
+    envVars:
+      - key: STRIPE_SECRET
+        value: sk_test_your_key
